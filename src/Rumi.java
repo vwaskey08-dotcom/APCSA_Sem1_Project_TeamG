@@ -1,4 +1,4 @@
-public class Rumi {
+public class Rumi implements DemonHunter{
     
     private String weapon;
     private int energy;
@@ -11,6 +11,14 @@ public class Rumi {
         this.energy = energy;
         this.popularityLevel = popularityLevel;
         this.hairColor = hairColor;
+    }
+
+    public Rumi()
+    {
+        this.weapon = "blank";
+        this.energy = 0;
+        this.popularityLevel = 0;
+        this.hairColor = "blank";
     }
 
     public void eat() {
