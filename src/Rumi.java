@@ -1,11 +1,44 @@
-public class Rumi {
+public class Rumi implements DemonHunter{
     
     private String weapon;
     private int energy;
     private int popularityLevel;
     private String hairColor;
 
-    public Rumi ()
+    public Rumi (String weapon, int energy, int popularityLevel, String hairColor)
+    {
+        this.weapon = weapon;
+        this.energy = energy;
+        this.popularityLevel = popularityLevel;
+        this.hairColor = hairColor;
+    }
+
+    public Rumi()
+    {
+        this.weapon = "blank";
+        this.energy = 0;
+        this.popularityLevel = 0;
+        this.hairColor = "blank";
+    }
+
+    public void eat() {
+        energy += 10;
+    }
+
+    public void sleep() {
+        energy += 20; 
+    }
+
+    public void fight(){
+        energy -= 15;
+    }
+
+    public void sing()
+    {
+        popularityLevel += 5;
+    }
+
+    public static void honmoonLevel()
     {
         
     }
