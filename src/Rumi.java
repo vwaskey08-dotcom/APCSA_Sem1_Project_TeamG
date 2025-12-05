@@ -2,8 +2,9 @@ public class Rumi implements DemonHunter{
     
     private String weapon;
     private int energy;
-    private int popularityLevel;
+    private int popularityLevel; //if popularity falls below a certain point than the band breaks up 
     private String hairColor;
+    private static int honmoonLevel = 5;
 
     public Rumi (String weapon, int energy, int popularityLevel, String hairColor)
     {
@@ -36,11 +37,24 @@ public class Rumi implements DemonHunter{
     public void sing()
     {
         popularityLevel += 5;
+        honmoonLevel += 2;
     }
 
-    public static void honmoonLevel()
+    public static String honmoonLevel()
     {
-        
+        if (honmoonLevel <= 0)
+        {
+            return "Honmoon has failed, demons have won";
+        }
+        else if (honmoonLevel >= 10)
+        {
+            return "Golden honmoon achieve, demons have lost";
+        }
+        else
+        {
+            return "Honmoon level is: " + honmoonLevel + ".";
+        }
     }
+
 
 }
