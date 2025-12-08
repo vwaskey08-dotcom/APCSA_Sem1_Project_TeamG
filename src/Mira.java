@@ -4,10 +4,10 @@ public class Mira{
     private int popularityLevel;
     private String hairColor;
     public Mira(String miraWeapon, int miraEnergy, int miraPopularityLevel, String miraHairColor){
-        weapon = miraWeapon;
-        energy = miraEnergy;
-        popularityLevel = miraPopularityLevel;
-        hairColor = miraHairColor;
+        weapon = "Gok-do";
+        energy = 50;
+        popularityLevel = 50;
+        hairColor = "Pink";
     }
     public static eat(){
         if(energy >= 90){
