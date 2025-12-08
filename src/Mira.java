@@ -35,7 +35,6 @@ public class Mira{
         energy -= 10;
     }
     public boolean fight(){
-        int roll = ((Math.random()*2)+1);
         energy -= 10;
         int roll = (int)((Math.random()*2)+1);
         if(roll == 1){
