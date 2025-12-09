@@ -1,4 +1,4 @@
-public class Zoey {
+public class Zoey implements DemonHunter {
     private String weapon;
     private int energy;
     private int popularityLevel;
@@ -6,10 +6,10 @@ public class Zoey {
 
     //constructor
     public Zoey(String weapon, int energy, int popularityLevel, String hairColor){
-        this.weapon = weapon;
-        this.energy = energy;
-        this.popularityLevel = popularityLevel;
-        this.hairColor = hairColor;
+        this.weapon = "daggers";
+        this.energy = 50;
+        this.popularityLevel = 100;
+        this.hairColor = "black";
     }
 
     public void eat() {
@@ -28,5 +28,17 @@ public class Zoey {
         energy -= 15;
     }
     
-    // this is too complicated
+    // if energy reaches 0, demons win
+    public void demonsWin(){
+        energy = 0;
+        popularityLevel = 0;
+        System.out.println("The demons have won! The honmoon is destroyed!");
+    }
+
+    // if popularityLevel reaches 500, honmoon is saved
+    public void honmoonSaved(){
+        popularityLevel = 500;
+        System.out.println("The honmoon is saved!");
+        // gjhkhkjh
+    }
 }
