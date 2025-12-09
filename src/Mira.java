@@ -1,15 +1,22 @@
-public class Mira{
+//create Mira class
+public class Mira implements DemonHunter{
+    
+    //initialize attributes
     private String weapon;
     private int energy;
     private int popularityLevel;
     private String hairColor;
+    
+    //create constructor
     public Mira(String miraWeapon, int miraEnergy, int miraPopularityLevel, String miraHairColor){
         weapon = miraWeapon;
         energy = miraEnergy;
         popularityLevel = miraPopularityLevel;
         hairColor = miraHairColor;
     }
-    public static eat(){
+    
+    //initialize methods
+    public void eat(){
         if(energy >= 90){
             energy = 100;
         }
@@ -17,7 +24,7 @@ public class Mira{
             energy += 10;
         }
     }
-    public static sleep(){
+    public void sleep(){
         if(energy >= 90){
             energy = 100;
         }
@@ -25,7 +32,7 @@ public class Mira{
             energy += 10;
         }
     }
-    public static rap(){
+    public void rap(){
         if(popularityLevel >= 90){
             popularityLevel = 100;
         }
