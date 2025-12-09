@@ -4,10 +4,10 @@ public class App {
 
     public static void main(String[] args) throws Exception {
         
-       
-       //test for rumi
-       
-       
+        Rumi rumi;
+        Zoey zoey;
+        Mira mira;
+        Jinu jinu;
        
         Scanner input = new Scanner(System.in);
 
@@ -17,32 +17,56 @@ public class App {
         System.out.println("1: Rumi, 2: Zoey, 3: Mira, 4: Jinu");
         int characterChoice = input.nextInt();
 
-        Rumi character = null;
-
         switch(characterChoice)
         {
             case 1: 
-                character = new Rumi();
+                rumi = new Rumi();
                 break;
 
             case 2:
-                //Zoey character = new Zoey();
+                // zoey = new Zoey();
                 break;
 
             case 3:
-                // Mira character = new Mira();
+                // mira = new Mira();
                 break;
             
             case 4:
-                //Jinu character = new Jinu();
+                jinu = new Jinu();
                 break;
-
         }
 
-        String name = character.getName();
 
-        System.out.printf("\n1: Feed %s, 2: Schedule a hotel for the band, 3: Fight Demons, 4: Perform", name);
-        int actionChoice = input.nextInt();
+
+        public static void characterInfo(int choice)
+        {
+            switch (choice)
+            {
+                case 1:
+                    System.out.println(rumi.toString());
+                    break;
+
+                case 2:
+                    System.out.println(zoey.toString());
+                    break;
+
+                case 3:
+                    System.out.println(mira.toString());
+                    break;
+
+                case 4:
+                    System.out.println(jinu.toString());
+                    break;
+            }
+        }
+
+        
+        // System.out.print(character.toString());
+
+        // String name = character.getName();
+
+        // System.out.printf("\n1: Feed %s, 2: Schedule a hotel for the band, 3: Fight Demons, 4: Perform", name);
+        // int actionChoice = input.nextInt();
 
         switch(actionChoice)
         {
@@ -65,6 +89,8 @@ public class App {
                 System.out.printf("\nYou have performed and increased the band's popularity!");
                 break;
         }
+
+        System.out.print(character.toString());
 
 
 
