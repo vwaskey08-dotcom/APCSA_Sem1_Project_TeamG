@@ -9,10 +9,10 @@ public class Mira{
     
     //create constructor
     public Mira(String miraWeapon, int miraEnergy, int miraPopularityLevel, String miraHairColor){
-        weapon = miraWeapon;
-        energy = miraEnergy;
-        popularityLevel = miraPopularityLevel;
-        hairColor = miraHairColor;
+        weapon = "Gok-do";
+        energy = 50;
+        popularityLevel = 50;
+        hairColor = "Pink";
     }
     
     //initialize methods
@@ -39,25 +39,25 @@ public class Mira{
         else{
             popularityLevel += 10;
         }
-        energy -= 10
+        energy -= 10;
     }
     public boolean fight(){
-        energy -= 10
-        int roll = ((Math.random()*2)+1);
+        energy -= 10;
+        int roll = (int)((Math.random()*2)+1);
         if(roll == 1){
-            popularityLevel += 10
+            popularityLevel += 10;
             return true;
         }
         else{
-            popularityLevel -= 10
+            popularityLevel -= 10;
             return false;
         }
     }
-    public static demonsWin(){
+    public static void demonsWin(){
         final energy;
         final popularityLevel;
     }
-    public static honmoonSaved(){
+    public static void honmoonSaved(){
         final energy;
         final popularityLevel;
     }
