@@ -14,6 +14,14 @@ public class Mira implements DemonHunter{
         popularityLevel = 50;
         hairColor = "Pink";
     }
+
+    //violet added a constructor with no parameters to test code in App.java
+    public Mira(){
+        weapon = "Gok-do";
+        energy = 50;
+        popularityLevel = 50;
+        hairColor = "Pink";
+    }
     
     //initialize methods
     public void eat(){
