@@ -3,7 +3,7 @@ public class Mira implements DemonHunter{
     private static int energy;
     private static int popularityLevel;
     private static String hairColor;
-    public Mira(String miraWeapon, int miraEnergy, int miraPopularityLevel, String miraHairColor){
+    public Mira(){
         weapon = "Gok-do";
         energy = 50;
         popularityLevel = 50;
@@ -35,8 +35,8 @@ public class Mira implements DemonHunter{
             popularityLevel -= 10;
         }
     }
-    public void getName(){
-        System.out.println("Mira");
+    public String getName(){
+        return "Mira";
     }
     public static void rap(){
         if(popularityLevel >= 90){
