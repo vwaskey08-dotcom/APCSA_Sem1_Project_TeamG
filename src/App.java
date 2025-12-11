@@ -24,6 +24,29 @@ public class App {
         
         return character;
     }
+
+    public static void randomEvent()
+    {
+        int rand = (int)Math.random() * (4 + 1);
+
+        switch (rand)
+        {
+            case 1:
+                //tbd
+                break;
+            case 2:
+                //tbd
+                break;
+            case 3:
+                //tbd
+                break;
+            case 4:
+                //tbd
+                break;
+
+        }
+       
+    }
     
 
 
@@ -50,7 +73,7 @@ public class App {
 
 //plan 
 
-//create a menu for the user to choose which character to manage
+//create a menu for the user to choose which character to manage == done
 
 //display the character's behaviors 
 
