@@ -36,6 +36,12 @@ public class Zoey implements DemonHunter {
     public void fight(){
         energy -= 15;
     }
+    //violet added a getter method to test stuff
+    public String getName()
+    {
+        return "Zoey";
+    }
+
     
     // if energy reaches 0, demons win
     public void demonsWin(){
