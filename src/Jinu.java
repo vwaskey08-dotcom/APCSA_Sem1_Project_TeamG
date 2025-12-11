@@ -1,35 +1,145 @@
-//create jinu class with demon hunter interface
+/**
+ * Creates a basic Jinu class that implements the DemonHunter interface
+ * @author Julia Lockwood
+ */
 public class Jinu implements DemonHunter{
-    //initalize attributes
+    
+    //----------initalize attributes--------------
     String weapon;
     int energy;
     int popularityLevel;
     String hairColor;
+    String name;
     
-    //initialize methods
-    public void eat(){
-        energy += 10;
+    //--------------create constructor---------------
+    public Jinu(String weapon, int energy, int popularityLevel, String hairColor){
+        this.weapon = weapon;
+        this.energy = energy;
+        this.popularityLevel = popularityLevel;
+        this.hairColor = hairColor;
     }
-
-    public void sleep(){
-        energy += 20;
-    }
-
-    public void fight(){
-        energy -= 15;
-        popularityLevel -= 10;
-    }
-
-    public void dance(){
-        popularityLevel += 15;
-        energy -= 10;
-    }
-
-    //create constructor
+    
     public Jinu(){
         this.weapon = "white paper fan";
         this.energy = 50;
         this.popularityLevel = 50;
         this.hairColor = "Black";
+        this.name = "Jinu";
+    }
+    
+    //violet added a getter method to test stuff
+
+    public String getName()
+    {
+        return name;
+    }
+
+
+    //---------------initialize methods-------------------
+
+    /**
+     * Increases energy by 10
+     */
+    public void eat(){
+        energy += 10;
+    }
+
+    /**
+     * Increases energy by 20
+     */
+    public void sleep(){
+        energy += 20;
+    }
+
+    /**
+     * Decreases energy by 15 and popularity level by 10
+     */
+    public void fight(){
+        energy -= 15;
+        popularityLevel -= 10;
+    }
+
+    /**
+     * Increases popularity level by 15 and decrease energy by 10
+     */
+    public void dance(){
+        popularityLevel += 15;
+        energy -= 10;
+    }
+
+    /**
+     * Returns Jinu's attributes as a string
+     * @return String of Jinu's attributes
+     */
+    public String toString(){
+        return ("Jinu's weapon: " + weapon + "\nJinu's energy level: " + energy + "\nJinu's popularity level: " + popularityLevel + "\nJinu's hair color: " + hairColor);
+    }
+
+    //---------------initalize getter methods----------------------------
+
+    /**
+     * Gets weapon
+     * @return weapon
+     */
+    public String getWeapon(){
+        return weapon;
+    }
+
+    /**
+     * Gets energy
+     * @return energy
+     */
+    public int getEnergy(){
+        return energy;
+    }
+
+    /**
+     * Gets popularity level
+     * @return popularity level
+     */
+    public int getPopularityLevel(){
+        return popularityLevel;
+    }
+
+    /**
+     * Gets hair color
+     * @return hair color
+     */
+    public String getHairColor(){
+        return hairColor;
+    }
+
+    //------------------initalize setter methods---------------------------
+
+    /**
+     * Sets weapon
+     * @param weapon
+     */
+    public void setWeapon(String weapon){
+        this.weapon = weapon;
+    }
+
+    /**
+     * Sets energy
+     * @param energy
+     */
+    public void setEnergy(int energy){
+        this.energy = energy;
+    }
+
+    /**
+     * Sets popularity level
+     * @param popularityLevel
+     */
+    public void setPopularityLevel(int popularityLevel){
+        this.popularityLevel = popularityLevel;
+    }
+
+    /**
+     * Sets hair color
+     * @param hairColor
+     */
+    public void setHairColor(String hairColor){
+        this.hairColor = hairColor;
     }
 }
