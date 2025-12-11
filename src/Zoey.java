@@ -12,6 +12,15 @@ public class Zoey implements DemonHunter {
         this.hairColor = "black";
     }
 
+    //violet added a constructor with no parameters to test code in App.java
+
+    public Zoey(){
+        this.weapon = "daggers";
+        this.energy = 50;
+        this.popularityLevel = 100;
+        this.hairColor = "black";
+    }
+
     public void eat() {
         energy += 10;
     }
