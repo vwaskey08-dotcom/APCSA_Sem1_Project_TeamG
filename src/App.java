@@ -56,5 +56,9 @@ public class App {
 
 //a way to win and die (ending) satisfy our random event here potentially 
 
+//kim- if popularity level reaches a certain point you win, if energy level is below a certain point you die, random: random number generator, pick a number, after every while loop add +1 to random int, once it gets to random number do the event
+//kim random stuff- int randomEventCounter = 0; (int)(Math.random()*(5-1+1)+1), 
+
+
 // random events
 
