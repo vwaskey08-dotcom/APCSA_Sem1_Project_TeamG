@@ -39,13 +39,9 @@ public class App {
 
         DemonHunter character = create(characterChoice);
 
-        character.getName();
+        System.out.println(character.getName());
 
 
-
-
-
-        
     }
 
 }
