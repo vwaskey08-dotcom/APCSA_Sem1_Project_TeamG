@@ -1,5 +1,5 @@
 //create Mira class
-public class Mira implements DemonHunter{
+public class Mira{
     
     //initialize attributes
     private String weapon;
