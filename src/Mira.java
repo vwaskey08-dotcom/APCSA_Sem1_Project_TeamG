@@ -9,6 +9,14 @@ public class Mira implements DemonHunter{
         popularityLevel = 50;
         hairColor = "Pink";
     }
+
+    //violet is adding a constructor with no parameters to test code in App.java
+    public Mira(){
+        weapon = "Gok-do";
+        energy = 50;
+        popularityLevel = 50;
+        hairColor = "Pink";
+    }
     public void eat(){
         if(energy >= 90){
             energy = 100;
@@ -35,8 +43,8 @@ public class Mira implements DemonHunter{
             popularityLevel -= 10;
         }
     }
-    public void getName(){
-        System.out.println("Mira");
+    public String getName(){
+        return "Mira";
     }
     public static void rap(){
         if(popularityLevel >= 90){
