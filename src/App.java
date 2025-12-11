@@ -2,6 +2,7 @@ import java.util.Scanner;
 
 public class App {
 
+    //creates character based on user choice
     public static DemonHunter create(int choice)
     {
         DemonHunter character = null;
@@ -39,7 +40,8 @@ public class App {
 
         DemonHunter character = create(characterChoice);
 
-        System.out.println(character.getName());
+        // System.out.println(character.getName()); testing stuff
+
 
 
     }
