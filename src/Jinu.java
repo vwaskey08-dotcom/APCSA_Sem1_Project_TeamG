@@ -9,6 +9,7 @@ public class Jinu implements DemonHunter{
     int energy;
     int popularityLevel;
     String hairColor;
+    String name;
     
     //--------------create constructor---------------
     public Jinu(String weapon, int energy, int popularityLevel, String hairColor){
@@ -23,8 +24,17 @@ public class Jinu implements DemonHunter{
         this.energy = 50;
         this.popularityLevel = 50;
         this.hairColor = "Black";
+        this.name = "Jinu";
     }
     
+    //violet added a getter method to test stuff
+
+    public String getName()
+    {
+        return name;
+    }
+
+
     //---------------initialize methods-------------------
 
     /**
