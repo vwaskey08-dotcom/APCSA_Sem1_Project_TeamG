@@ -1,29 +1,22 @@
-//create Mira class
-public class Mira{
-    
-    //initialize attributes
-    private String weapon;
-    private int energy;
-    private int popularityLevel;
-    private String hairColor;
-    
-    //create constructor
-    public Mira(String miraWeapon, int miraEnergy, int miraPopularityLevel, String miraHairColor){
-        weapon = "Gok-do";
-        energy = 50;
-        popularityLevel = 50;
-        hairColor = "Pink";
-    }
-
-    //violet added a constructor with no parameters to test code in App.java
+public class Mira implements DemonHunter{
+    private static String weapon;
+    private static int energy;
+    private static int popularityLevel;
+    private static String hairColor;
     public Mira(){
         weapon = "Gok-do";
         energy = 50;
         popularityLevel = 50;
         hairColor = "Pink";
     }
-    
-    //initialize methods
+
+    //violet is adding a constructor with no parameters to test code in App.java
+    public Mira(){
+        weapon = "Gok-do";
+        energy = 50;
+        popularityLevel = 50;
+        hairColor = "Pink";
+    }
     public void eat(){
         if(energy >= 90){
             energy = 100;
@@ -40,7 +33,20 @@ public class Mira{
             energy += 10;
         }
     }
-    public void rap(){
+    public void fight(){
+        energy -= 10;
+        int roll = (int)((Math.random()*2)+1);
+        if(roll == 1){
+            popularityLevel += 10;
+        }
+        else{
+            popularityLevel -= 10;
+        }
+    }
+    public String getName(){
+        return "Mira";
+    }
+    public static void rap(){
         if(popularityLevel >= 90){
             popularityLevel = 100;
         }
@@ -48,25 +54,5 @@ public class Mira{
             popularityLevel += 10;
         }
         energy -= 10;
-    }
-    public boolean fight(){
-        energy -= 10;
-        int roll = (int)((Math.random()*2)+1);
-        if(roll == 1){
-            popularityLevel += 10;
-            return true;
-        }
-        else{
-            popularityLevel -= 10;
-            return false;
-        }
-    }
-    public static void demonsWin(){
-        final energy;
-        final popularityLevel;
-    }
-    public static void honmoonSaved(){
-        final energy;
-        final popularityLevel;
     }
 }
