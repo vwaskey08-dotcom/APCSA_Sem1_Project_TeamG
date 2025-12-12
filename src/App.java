@@ -69,16 +69,18 @@ public class App {
         // System.out.println(character.getName()); testing stuff
      
         
-//        while(character.getEnergy() < 100 && character.getEenergy() > 0 && character.getPopularity() < 100 && character.getPopularity() > 0){
-//            System.out.println("----------");
-  //          System.out.println("What would you like to do next?");
-    //        character.displayHunterOptions();
-      //      int behaviorChoice = input.nextInt();
-        //    if(behaviorChoice == 1){
-//
-  //          }
-    //        else if(behaviorChoice ==)
-      //  }
+        while(character.getEnergy() < 100 && character.getEenergy() > 0 && character.getPopularity() < 100 && character.getPopularity() > 0){
+            System.out.println("----------");
+            System.out.println("What would you like to do next?");
+            displayHunterOptions(character.getName());
+            int behaviorChoice = input.nextInt();
+            if(behaviorChoice == 1){
+
+            }
+            else if(behaviorChoice == 2){
+
+            }
+        }
 
     }
     
