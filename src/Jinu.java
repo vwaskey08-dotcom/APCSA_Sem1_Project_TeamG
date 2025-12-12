@@ -1,6 +1,8 @@
 /**
- * Creates a basic Jinu class that implements the DemonHunter interface
+ * Creates a basic Jinu class \
+ * Implements the DemonHunter interface
  * @author Julia Lockwood
+ * @version 1.0
  */
 public class Jinu implements DemonHunter{
     
@@ -41,29 +43,50 @@ public class Jinu implements DemonHunter{
      * Increases energy by 10
      */
     public void eat(){
-        energy += 10;
+        if(energy >= 90){
+            energy = 100;
+        }
+        else{
+            energy += 10;
+        }
     }
 
     /**
      * Increases energy by 20
      */
     public void sleep(){
-        energy += 20;
+        if(energy >= 80){
+            energy = 100;
+        }
+        else{
+            energy += 20;
+        }
     }
 
     /**
      * Decreases energy by 15 and popularity level by 10
      */
     public void fight(){
-        energy -= 15;
-        popularityLevel -= 10;
+        energy -= 10;
+        int roll = (int)((Math.random()*2)+1);
+        if(roll == 1){
+            popularityLevel += 10;
+        }
+        else{
+            popularityLevel -= 10;
+        }
     }
 
     /**
      * Increases popularity level by 15 and decrease energy by 10
      */
     public void dance(){
-        popularityLevel += 15;
+        if(popularityLevel >= 90){
+            popularityLevel = 100;
+        }
+        else{
+            popularityLevel += 10;
+        }
         energy -= 10;
     }
 
