@@ -132,6 +132,14 @@ public class Jinu implements DemonHunter{
         return hairColor;
     }
 
+    /**
+     * Gets name
+     * @return name
+     */
+    public String getName(){
+        return "Jinu";
+    }
+
     //------------------initalize setter methods---------------------------
 
     /**

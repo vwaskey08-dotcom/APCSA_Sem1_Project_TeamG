@@ -84,4 +84,7 @@ public class Mira implements DemonHunter{
         }
         energy -= 10;
     }
+    public String getOptions(){
+        return "1. Eat\n2. Sleep\n3. Fight\n4. Rap\n5. End Game";
+    }
 }
