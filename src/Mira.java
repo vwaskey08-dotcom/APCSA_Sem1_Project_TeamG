@@ -1,8 +1,22 @@
+/**
+ * Mira class represents a Demon Hunter character with specific attributes and actions.
+ * Implements the DemonHunter interface.
+ * 
+ * @author 
+ * @version 1.0
+ */
+
 public class Mira implements DemonHunter{
+    
+    //----------initalize attributes--------------
     private static String weapon;
     private static int energy;
     private static int popularityLevel;
     private static String hairColor;
+    
+    /**
+     * Constructor for Mira class
+     */
     public Mira(){
         weapon = "Gok-do";
         energy = 50;
@@ -10,13 +24,11 @@ public class Mira implements DemonHunter{
         hairColor = "Pink";
     }
 
-    //violet is adding a constructor with no parameters to test code in App.java
-    public Mira(){
-        weapon = "Gok-do";
-        energy = 50;
-        popularityLevel = 50;
-        hairColor = "Pink";
-    }
+    //---------------initialize methods-------------------
+    
+    /**
+     * Increases energy by 10, up to a maximum of 100
+     */
     public void eat(){
         if(energy >= 90){
             energy = 100;
@@ -25,14 +37,22 @@ public class Mira implements DemonHunter{
             energy += 10;
         }
     }
+
+    /**
+     * Increases energy by 10, up to a maximum of 100
+     */
     public void sleep(){
-        if(energy >= 90){
+        if(energy >= 80){
             energy = 100;
         }
         else{
-            energy += 10;
+            energy += 20;
         }
     }
+
+    /**
+     * Decreases energy by 10 and randomly increases or decreases popularity level by 10
+     */
     public void fight(){
         energy -= 10;
         int roll = (int)((Math.random()*2)+1);
@@ -43,9 +63,18 @@ public class Mira implements DemonHunter{
             popularityLevel -= 10;
         }
     }
+
+    /**
+     * Getter for name
+     * @return name of character
+     */
     public String getName(){
         return "Mira";
     }
+
+    /**
+     * Increases popularity level by 10, up to a maximum of 100, and decreases energy by 10
+     */
     public static void rap(){
         if(popularityLevel >= 90){
             popularityLevel = 100;
