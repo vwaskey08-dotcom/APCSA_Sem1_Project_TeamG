@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class App {
 
-    //creates character based on user choice
+      //creates character based on user choice
     public static DemonHunter create(int choice)
     {
         DemonHunter character = null;
@@ -24,7 +24,7 @@ public class App {
         
         return character;
     }
-
+    
     public static void randomEvent()
     {
         int rand = (int)Math.random() * (4 + 1);
@@ -64,10 +64,21 @@ public class App {
         DemonHunter character = create(characterChoice);
 
         // System.out.println(character.getName()); testing stuff
-
-
+     
+        
+//        while(character.getEnergy() < 100 && character.getEenergy() > 0 && character.getPopularity() < 100 && character.getPopularity() > 0){
+//            System.out.println("----------");
+  //          System.out.println("What would you like to do next?");
+    //        character.printBehaviors();
+      //      int behaviorChoice = input.nextInt();
+        //    if(behaviorChoice == 1){
+//
+  //          }
+    //        else if(behaviorChoice ==)
+      //  }
 
     }
+    
 
 }
 
@@ -78,9 +89,7 @@ public class App {
 //display the character's behaviors 
 
 //while loop 
-while(character.energy < 100 && character.energy > 0){
-    //something
-}
+
 //a way to win and die (ending) satisfy our random event here potentially 
 
 //kim- if popularity level reaches a certain point you win, if energy level is below a certain point you die, random: random number generator, pick a number, after every while loop add +1 to random int, once it gets to random number do the event
