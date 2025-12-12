@@ -1,7 +1,14 @@
 import java.util.Scanner;
-
+/**
+ * 'App' class to run the K-pop Demon Hunter Manager game
+ */
 public class App {
 
+    /**
+     * Create a DemonHunter character based on user choice
+     * @param choice
+     * @return DemonHunter
+     */
     //create methods
 
 
@@ -27,10 +34,14 @@ public class App {
         
         return character;
     }
+
+    /**
+     * Generate a random event for the game
+     */
     
     public static void randomEvent()
     {
-        int rand = (int)Math.random() * (4 + 1);
+        int rand = (int)Math.random() * (4) + 1;
 
         switch (rand)
         {
@@ -55,16 +66,17 @@ public class App {
 
     public static void main(String[] args) throws Exception {
         
-        
+        //creating scanner object
         Scanner input = new Scanner(System.in);
 
-        System.out.println("Welcome! You are the manager for the K-pop demon hunters.");
-        System.out.println("Who would you like to manage?");
-        
+        //welcome message and character selection
+        System.out.println("Welcome! You are the manager for the K-pop demon hunters.\n Who would you like to manage today?");
         System.out.println("1: Rumi, 2: Zoey, 3: Mira, 4: Jinu");
         int characterChoice = input.nextInt();
 
+        //create character based on user choice
         DemonHunter character = create(characterChoice);
+
 
         // System.out.println(character.getName()); testing stuff
      
