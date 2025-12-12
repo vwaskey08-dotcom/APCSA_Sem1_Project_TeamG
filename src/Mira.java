@@ -3,13 +3,6 @@ public class Mira implements DemonHunter{
     private static int energy;
     private static int popularityLevel;
     private static String hairColor;
-    public Mira(){
-        weapon = "Gok-do";
-        energy = 50;
-        popularityLevel = 50;
-        hairColor = "Pink";
-    }
-
     //violet is adding a constructor with no parameters to test code in App.java
     public Mira(){
         weapon = "Gok-do";
@@ -54,5 +47,8 @@ public class Mira implements DemonHunter{
             popularityLevel += 10;
         }
         energy -= 10;
+    }
+    public String getOptions(){
+        return "1. Eat\n2. Sleep\n3. Fight\n4. Rap\n5. End Game";
     }
 }
