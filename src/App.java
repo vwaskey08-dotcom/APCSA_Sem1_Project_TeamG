@@ -2,6 +2,9 @@ import java.util.Scanner;
 
 public class App {
 
+    //create methods
+
+
     public static DemonHunter create(int choice)
     {
         DemonHunter character = null;
@@ -40,25 +43,78 @@ public class App {
         DemonHunter character = create(characterChoice);
 
         character.getName();
-
-
-
-
-
         
     }
+
+    //display the character's behaviors, choosing between each character's choices 
+    public static void displayHunterOptions (String characterType){
+        switch (characterType.toLowerCase()) {
+            case "rumi":
+                displayRumiOptions();
+                break;
+            case "zoey":
+                displayZoeyOptions();
+                break;
+            case "mira":
+                displayMiraOptions();
+                break;
+            case "jinu":
+                displayJinuOptions();
+                break;
+            default:
+                break;
+        }
+    }
+
+    //display Rumi's behaviors
+    public static void displayRumiOptions(){
+        System.out.println("Rumi's options:");
+        System.out.println("1: Eat");
+        System.out.println("2: Sleep");
+        System.out.println("3: Fight");
+        System.out.println("4: Sing");
+    }
+
+    //display Zoey's behaviors
+    public static void displayZoeyOptions(){
+        System.out.println("Zoey's options:");
+        System.out.println("1: Eat");
+        System.out.println("2: Sleep");
+        System.out.println("3: Fight");
+        System.out.println("4: Rap");
+    }
+
+    //display Mira's behaviors
+    public static void displayMiraOptions(){
+        System.out.println("Mira's options:");
+        System.out.println("1: Eat");
+        System.out.println("2: Sleep");
+        System.out.println("3: Fight");
+        System.out.println("4: Dance");
+    }
+
+    //display Jinu's behaviors
+    public static void displayJinuOptions(){
+        System.out.println("Jinu's options:");
+        System.out.println("1: Eat");
+        System.out.println("2: Sleep");
+        System.out.println("3: Fight");
+        System.out.println("4: Dance");
+    }
+
+
 
 }
 
 //plan 
 
-//create a menu for the user to choose which character to manage
+//create a menu for the user to choose which character to manage - violet
 
-//display the character's behaviors 
+//display the character's behaviors -julia
 
-//while loop 
+//while loop - ethan
 
-//a way to win and die (ending) satisfy our random event here potentially 
+//a way to win and die (ending) satisfy our random event here potentially - kim
 
-// random events
+// random events -kim
 
