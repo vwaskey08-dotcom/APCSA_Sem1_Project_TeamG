@@ -9,10 +9,7 @@ public class App {
      * @param choice
      * @return DemonHunter
      */
-    //create methods
 
-
-      //creates character based on user choice
     public static DemonHunter create(int choice)
     {
         DemonHunter character = null;
@@ -81,7 +78,7 @@ public class App {
         // System.out.println(character.getName()); testing stuff
      
         
-        while(character.getEnergy() < 100 && character.getEenergy() > 0 && character.getPopularity() < 100 && character.getPopularity() > 0){
+        while(character.getEnergy() < 100 && character.getEnergy() > 0 && character.getPopularity() < 100 && character.getPopularity() > 0){
             System.out.println("----------");
             System.out.println("What would you like to do next?");
             displayHunterOptions(character.getName());

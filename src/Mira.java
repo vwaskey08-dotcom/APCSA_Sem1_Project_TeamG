@@ -87,4 +87,14 @@ public class Mira implements DemonHunter{
     public String getOptions(){
         return "1. Eat\n2. Sleep\n3. Fight\n4. Rap\n5. End Game";
     }
+
+    @Override
+    public int getEnergy() {
+        return energy;
+    }
+
+    @Override
+    public int getPopularity() {
+        return popularityLevel;
+    }
 }

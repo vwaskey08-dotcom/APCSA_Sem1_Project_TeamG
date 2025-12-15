@@ -60,7 +60,7 @@ public class Rumi implements DemonHunter{
      * Getter for popularity level
      * @return popularity level of character
      */
-    public int getPopularityLevel()
+    public int getPopularity()
     {
         return popularityLevel;
     }
