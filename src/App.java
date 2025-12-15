@@ -138,6 +138,8 @@ public class App {
                 System.out.println(character.getName() + " has become the ultimate K-pop demon hunter, loved by all!");
             }
         }
+        System.out.println("Thanks for playing!");
+        return;
     }
     
 

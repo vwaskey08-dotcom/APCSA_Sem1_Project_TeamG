@@ -6,11 +6,11 @@
  * @version 1.0
  */
 public class Zoey implements DemonHunter {
-    private String weapon;
-    private int energy;
-    private int popularityLevel;
-    private String hairColor;
-    private String name;
+    private static String weapon;
+    private static int energy;
+    private static int popularityLevel;
+    private static String hairColor;
+    private static String name;
 
     //constructor
     public Zoey(String weapon, int energy, int popularityLevel, String hairColor){
@@ -95,7 +95,7 @@ public String getHairColor()
         }
     }
 
-    public void write(){
+    public static void write(){
         if(popularityLevel >= 90){
             popularityLevel = 100;
         }

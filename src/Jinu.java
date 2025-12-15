@@ -7,11 +7,11 @@
 public class Jinu implements DemonHunter{
     
     //----------initalize attributes--------------
-    String weapon;
-    int energy;
-    int popularityLevel;
-    String hairColor;
-    String name;
+    static String weapon;
+    static int energy;
+    static int popularityLevel;
+    static String hairColor;
+    static String name;
     
     //--------------create constructor---------------
     public Jinu(String weapon, int energy, int popularityLevel, String hairColor){
@@ -75,7 +75,7 @@ public class Jinu implements DemonHunter{
     /**
      * Increases popularity level by 15 and decrease energy by 10
      */
-    public void dance(){
+    public static void dance(){
         if(popularityLevel >= 90){
             popularityLevel = 100;
         }

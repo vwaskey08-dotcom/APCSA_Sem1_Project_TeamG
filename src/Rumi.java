@@ -8,11 +8,11 @@
 public class Rumi implements DemonHunter{
     
     ///----------initalize attributes--------------
-    private String weapon;
-    private int energy;
-    private int popularityLevel; 
-    private String hairColor;
-    private String name;
+    private static String weapon;
+    private static int energy;
+    private static int popularityLevel; 
+    private static String hairColor;
+    private static String name;
 
     /**
      * Constructor for Rumi class
@@ -119,7 +119,7 @@ public class Rumi implements DemonHunter{
     /**
      * Increases popularity level by 5
      */
-    public void sing()
+    public static void sing()
     {
         if(popularityLevel >= 90){
             popularityLevel = 100;
