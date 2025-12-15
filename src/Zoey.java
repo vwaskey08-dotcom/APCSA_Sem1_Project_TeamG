@@ -7,8 +7,8 @@
  */
 public class Zoey implements DemonHunter {
     private String weapon;
-    private int energy;
-    private int popularityLevel;
+    private static int energy;
+    private static int popularityLevel;
     private String hairColor;
     private String name;
 
@@ -95,7 +95,7 @@ public String getHairColor()
         }
     }
 
-    public void write(){
+    public static void write(){
         if(popularityLevel >= 90){
             popularityLevel = 100;
         }

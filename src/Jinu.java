@@ -8,8 +8,8 @@ public class Jinu implements DemonHunter{
     
     //----------initalize attributes--------------
     String weapon;
-    int energy;
-    int popularityLevel;
+    private static int energy;
+    private static int popularityLevel;
     String hairColor;
     String name;
     
@@ -75,7 +75,7 @@ public class Jinu implements DemonHunter{
     /**
      * Increases popularity level by 15 and decrease energy by 10
      */
-    public void dance(){
+    public static void dance(){
         if(popularityLevel >= 90){
             popularityLevel = 100;
         }
