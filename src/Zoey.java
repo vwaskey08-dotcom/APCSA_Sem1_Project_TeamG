@@ -7,8 +7,8 @@
  */
 public class Zoey implements DemonHunter {
     private String weapon;
-    private int energy;
-    private int popularityLevel;
+    private static int energy;
+    private static int popularityLevel;
     private String hairColor;
     private String name;
 
@@ -106,10 +106,8 @@ public String getHairColor()
             energy += 20;
         }
     }
-/**
- * Increases popularity level by 5 and decreases energy by 10 when writing
- */
-    public void write(){
+
+    public static void write(){
         if(popularityLevel >= 90){
             popularityLevel = 100;
         }

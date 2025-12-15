@@ -4,63 +4,6 @@ import java.util.Scanner;
  */
 public class App {
 
-    /**
-     * Create a DemonHunter character based on user choice
-     * @param choice
-     * @return DemonHunter
-     */
-
-    public static DemonHunter create(int choice)
-    {
-        DemonHunter character = null;
-        switch(choice)
-        {
-            case 1:
-                character = new Rumi();
-                break; 
-            case 2:
-                character = new Zoey();
-                break;
-            case 3:
-                character = new Mira();
-                break;
-            case 4:
-                character = new Jinu();
-                break;
-        }
-        
-        return character;
-    }
-
-    /**
-     * Generate a random event for the game
-     */
-    
-    public static void randomEvent()
-    {
-        int rand = (int)Math.random() * (4) + 1;
-
-        switch (rand)
-        {
-            case 1:
-                //tbd
-                break;
-            case 2:
-                //tbd
-                break;
-            case 3:
-                //tbd
-                break;
-            case 4:
-                //tbd
-                break;
-
-        }
-       
-    }
-    
-
-
     public static void main(String[] args) throws Exception {
         
         //creating scanner object
@@ -74,8 +17,6 @@ public class App {
         //create character based on user choice
         DemonHunter character = create(characterChoice);
 
-
-        // System.out.println(character.getName()); testing stuff
      
         //loop for choosing options
         while(character.getEnergy() < 100 && character.getEnergy() > 0 && character.getPopularity() < 100 && character.getPopularity() > 0){
@@ -83,6 +24,7 @@ public class App {
             System.out.println("What would you like to do?");
             displayHunterOptions(character.getName());
             int behaviorChoice = input.nextInt();
+            
             if(behaviorChoice == 1){
                 character.eat();
             }
@@ -106,8 +48,12 @@ public class App {
                     Jinu.dance();
                 }
             }
-            else{
-                System.out.println("Thanks for playing!");
+                else{
+                    System.out.println("Thanks for playing!");
+                    break; // Exit the loop to prevent infinite execution
+                }
+                System.out.println(character.toString());
+                System.out.println("----------");
             }
             System.out.println(character.toString());
             System.out.println("----------");
@@ -141,33 +87,39 @@ public class App {
     }
     
 
-    //display the character's behaviors, choosing between each character's choices 
-    public static void displayHunterOptions (String characterType){
-        switch (characterType.toLowerCase()) {
-            case "rumi":
-                displayRumiOptions();
-                break;
-            case "zoey":
-                displayZoeyOptions();
-                break;
-            case "mira":
-                displayMiraOptions();
-                break;
-            case "jinu":
-                displayJinuOptions();
-                break;
-            default:
-                break;
+
+        
+    if (character.getEnergy() <= 0 || character.getPopularity() <= 0){
+        int random_ending = (int)(Math.random() * (3 - 1 + 1) + 1);
+        if (random_ending == 1){
+        System.out.println(character.getName() + " has died from exhaustion. Game Over.");
+        }
+        else if (random_ending == 2){
+            System.out.println("You failed to maintain" + character.getName() + "'s " + "popularity. The demons have broken the honmoon. Game Over.");
+        }
+        else 
+        {
+        System.out.println("The demons have taken over with their new hit song 'Hypnotic'. Game over.");
         }
     }
+    else if (character.getEnergy() >= 100 || character.getPopularity() >= 100){
+        int random_ending = (int)(Math.random() * (3 - 1 + 1) + 1);
+        
+        if (random_ending == 1)
+        {
+        System.out.println("Congratulations! You have successfully managed your K-pop demon hunter to fame and fortune!");
+        }
+        else if (random_ending == 2)
+        {
+        System.out.println("You have defeated the demons and restored peace to the honmoon! Victory is yours!");
+        }
+        else 
+        {
+        System.out.println(character.getName() + " has become the ultimate K-pop demon hunter, loved by all!");
+        }
+    
 
-    //display Rumi's behaviors
-    public static void displayRumiOptions(){
-        System.out.println("Rumi's options:");
-        System.out.println("1: Eat");
-        System.out.println("2: Sleep");
-        System.out.println("3: Fight");
-        System.out.println("4: Sing");
+     }
     }
 
     //display Zoey's behaviors
@@ -188,14 +140,41 @@ public class App {
         System.out.println("4: Rap");
     }
 
-    //display Jinu's behaviors
-    public static void displayJinuOptions(){
-        System.out.println("Jinu's options:");
-        System.out.println("1: Eat");
-        System.out.println("2: Sleep");
-        System.out.println("3: Fight");
-        System.out.println("4: Dance");
-    }
+/**
+ * Display Zoey's behaviors
+ */
+ public static void displayZoeyOptions(){
+     System.out.println("Zoey's options:");
+     System.out.println("1: Eat");
+     System.out.println("2: Sleep");
+     System.out.println("3: Fight");
+     System.out.println("4: Rap");
+ }
+
+/**
+ * Display Mira's behaviors
+ */
+ public static void displayMiraOptions(){
+     System.out.println("Mira's options:");
+     System.out.println("1: Eat");
+     System.out.println("2: Sleep");
+     System.out.println("3: Fight");
+     System.out.println("4: Dance");
+ }
+
+/**
+ * Display Jinu's behaviors
+ */
+ public static void displayJinuOptions(){
+     System.out.println("Jinu's options:");
+     System.out.println("1: Eat");
+     System.out.println("2: Sleep");
+     System.out.println("3: Fight");
+     System.out.println("4: Dance");
+ }
+
+}
+   
 
 
 
