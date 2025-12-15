@@ -1,3 +1,10 @@
+/**
+ * Zoey class represents a Demon Hunter character with specific attributes and actions.
+ * Implements the DemonHunter interface.
+ * 
+ * @author
+ * @version 1.0
+ */
 public class Zoey implements DemonHunter {
     private String weapon;
     private int energy;
@@ -81,27 +88,48 @@ public String getHairColor()
  * Increases energy by 10 when eating
  */
     public void eat() {
-        energy += 10;
+        if(energy >= 90){
+            energy = 100;
+        }
+        else{
+            energy += 10;
+        }
     }
 /** 
  * Increases energy by 20 when sleeping
  */
     public void sleep() {
-        energy += 20; 
+        if(energy >= 80){
+            energy = 100;
+        }
+        else{
+            energy += 20;
+        }
     }
 /**
  * Increases popularity level by 5 and decreases energy by 10 when writing
  */
     public void write(){
-        popularityLevel += 5;
+        if(popularityLevel >= 90){
+            popularityLevel = 100;
+        }
+        else{
+            popularityLevel += 10;
+        }
         energy -= 10;
     }
 /**
  * Decreases energy by 15 and popularity level by 10 when fighting
  */
     public void fight(){
-        energy -= 15;
-        popularityLevel -=10;
+        energy -= 10;
+        int roll = (int)((Math.random()*2)+1);
+        if(roll == 1){
+            popularityLevel += 10;
+        }
+        else{
+            popularityLevel -= 10;
+        }
     }
 /**
  * Returns a string representation of the character
@@ -125,4 +153,10 @@ public String getHairColor()
         //System.out.println("The honmoon is saved!");
         // gjhkhkjh
    // }
+    }
+
+    @Override
+    public int getPopularity() {
+        return popularityLevel;
+    }
 }
