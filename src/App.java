@@ -80,15 +80,37 @@ public class App {
         
         while(character.getEnergy() < 100 && character.getEnergy() > 0 && character.getPopularity() < 100 && character.getPopularity() > 0){
             System.out.println("----------");
-            System.out.println("What would you like to do next?");
+            System.out.println("What would you like to do?");
             displayHunterOptions(character.getName());
             int behaviorChoice = input.nextInt();
             if(behaviorChoice == 1){
-
+                character.eat();
             }
             else if(behaviorChoice == 2){
-
+                character.sleep();
             }
+            else if(behaviorChoice == 3){
+                character.fight();
+            }
+            else if(behaviorChoice == 4){
+                if(characterChoice == 1){
+                    Rumi.sing();
+                }
+                else if(characterChoice == 2){
+                    Zoey.rap();
+                }
+                else if(characterChoice == 3){
+                    Mira.dance();
+                }
+                else if(characterChoice == 4){
+                    Jinu.dance();
+                }
+            }
+            else{
+                System.out.println("Thanks for playing!");
+            }
+            System.out.println(character.toString());
+            System.out.println("----------");
         }
 
     }
