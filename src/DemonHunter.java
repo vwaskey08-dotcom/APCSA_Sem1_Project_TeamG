@@ -1,3 +1,6 @@
+/**
+ * This interface represents a Demon Hunter character with basic actions.
+ */
 interface DemonHunter
 {
     public void eat();

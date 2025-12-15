@@ -1,8 +1,16 @@
+/**
+ * Rumi class representing a Demon Hunter character
+ * Implements the DemonHunter interface
+ * 
+ * @author Violet Waskey
+ * @version 1.0
+ */
 public class Rumi implements DemonHunter{
     
+    ///----------initalize attributes--------------
     private String weapon;
     private int energy;
-    private int popularityLevel; //if popularity falls below a certain point than the band breaks up 
+    private int popularityLevel; 
     private String hairColor;
     private String name;
 
@@ -18,7 +26,7 @@ public class Rumi implements DemonHunter{
         this.name = "Rumi";
     }
     
-    // Getters
+    //--------------getter methods-------------------
 
     /**
      * Getter for name
@@ -68,28 +76,44 @@ public class Rumi implements DemonHunter{
 
 
 
-    // Actions
+    //--------------setter methods-------------------
 
     /**
      * Increases energy by 10
      */
     public void eat() {
-        energy += 10;
+        if(energy >= 90){
+            energy = 100;
+        }
+        else{
+            energy += 10;
+        }
     }
 
     /**
      * Increases energy by 20
      */
     public void sleep() {
-        energy += 20; 
+        if(energy >= 80){
+            energy = 100;
+        }
+        else{
+            energy += 20;
+        }
     }
 
     /**
      * Decreases energy by 15 
      */
     public void fight(){
-        energy -= 15;
-        popularityLevel -= 10;
+        energy -= 10;
+        int roll = (int)((Math.random()*2)+1);
+        if(roll == 1){
+            popularityLevel += 10;
+        }
+        else{
+            popularityLevel -= 10;
+        }
     }
 
     /**
@@ -97,7 +121,12 @@ public class Rumi implements DemonHunter{
      */
     public void sing()
     {
-        popularityLevel += 15;
+        if(popularityLevel >= 90){
+            popularityLevel = 100;
+        }
+        else{
+            popularityLevel += 10;
+        }
         energy -= 10;
     }
 
@@ -108,25 +137,5 @@ public class Rumi implements DemonHunter{
     {
         return "Character: " + name+ "\nWeapon: " + weapon + "\nEnergy: " + energy + "\nPopularity Level: " + popularityLevel + "\nHair Color: " + hairColor;
     }
-
-
-
-    // public static String honmoonLevel()
-    // {
-    //     if (honmoonLevel <= 0)
-    //     {
-    //         return "Honmoon has failed, demons have won";
-    //     }
-    //     else if (honmoonLevel >= 10)
-    //     {
-    //         return "Golden honmoon achieve, demons have lost";
-    //     }
-    //     else
-    //     {
-    //         return "Honmoon level is: " + honmoonLevel + ".";
-    //     }
-    // }
-
-
 
 }
