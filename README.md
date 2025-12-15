@@ -5,16 +5,18 @@ K-pop Demon Hunters: Virtual Life Simulator
 The simulator is designed to enable the user to act as the manager of either Rumi, Mira, Zoey, or Jinu, allowing the player to dictate their behaviour to boost energy and popularity. The program acts as an extension of the movie, so when players are successful, they can save the Honmoon, but if they lose, the demons take over.
 
 # Playable Characters:
--Rumi: Purple hair, can sing, and uses a sword
+-Rumi: Purple hair, can sing, and uses a Saingeom
 
 -Jinu: Black hair, can dance, and uses a lute
 
--Mira: Pink hair, can rap, and uses a 
+-Mira: Pink hair, can rap, and uses a Gok-do
 
--Zoey: Purple hair, can write songs, and uses a 
+-Zoey: Purple hair, can write songs, and uses daggers
 
 # Class Diagram:
-<img width="721" height="391" alt="APCSA_Sem1_Project_TeamG_classDiagram drawio" src="https://github.com/user-attachments/assets/c7345337-54a5-4b7f-8ce1-e2835d3245d1" />
+<img width="721" height="371" alt="APCSA_Sem1_Project_TeamG_classDiagram drawio" src="https://github.com/user-attachments/assets/968da6cc-6709-447e-9f4c-3f0279d61623" />
+
+
 
 
 # Main Classes:

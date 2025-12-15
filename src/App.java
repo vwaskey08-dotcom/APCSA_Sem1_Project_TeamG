@@ -18,7 +18,7 @@ public class App {
         DemonHunter character = create(characterChoice);
 
      
-        
+        //loop for choosing options
         while(character.getEnergy() < 100 && character.getEnergy() > 0 && character.getPopularity() < 100 && character.getPopularity() > 0){
             System.out.println("----------");
             System.out.println("What would you like to do?");
@@ -55,11 +55,37 @@ public class App {
                 System.out.println(character.toString());
                 System.out.println("----------");
             }
-        
-
-
-
-
+            System.out.println(character.toString());
+            System.out.println("----------");
+        }
+        //losing conditions
+        if (character.getEnergy() <= 0 || character.getPopularity() <= 0){
+            int random_ending = (int)(Math.random() * (3 - 1 + 1) + 1);
+            if (random_ending == 1){
+                System.out.println(character.getName() + " has died from exhaustion. Game Over.");
+            }
+            else if (random_ending == 2){
+                System.out.println("You failed to maintain" + character.getName() + "'s " + "popularity. The demons have broken the honmoon. Game Over.");
+            }
+            else {
+                System.out.println("The demons have taken over with their new hit song 'Hypnotic'. Game over.");
+            }
+        }
+        //winning conditions
+        if (character.getEnergy() >= 100 || character.getPopularity() >= 100){
+            int random_ending = (int)(Math.random() * (3 - 1 + 1) + 1);
+            if (random_ending == 1){
+                System.out.println("Congratulations! You have successfully managed your K-pop demon hunter to fame and fortune!");
+            }
+            else if (random_ending == 2){
+                System.out.println("You have defeated the demons and restored peace to the honmoon! Victory is yours!");
+            }
+            else {
+                System.out.println(character.getName() + " has become the ultimate K-pop demon hunter, loved by all!");
+            }
+        }
+    }
+    
 
 
         
@@ -96,67 +122,23 @@ public class App {
      }
     }
 
- /**
-     * Create a DemonHunter character based on user choice
-     * @param choice
-     * @return DemonHunter
-     */
+    //display Zoey's behaviors
+    public static void displayZoeyOptions(){
+        System.out.println("Zoey's options:");
+        System.out.println("1: Eat");
+        System.out.println("2: Sleep");
+        System.out.println("3: Fight");
+        System.out.println("4: Write");
+    }
 
- public static DemonHunter create(int choice)
- {
-     DemonHunter character = null;
-     switch(choice)
-     {
-         case 1:
-             character = new Rumi();
-             break; 
-         case 2:
-             character = new Zoey();
-             break;
-         case 3:
-             character = new Mira();
-             break;
-         case 4:
-             character = new Jinu();
-             break;
-     }
-     
-     return character;
- }
-
- /**
-  * Display the options for the selected DemonHunter character
-  * @param characterType
-  */
-  public static void displayHunterOptions (String characterType){
-     switch (characterType.toLowerCase()) {
-         case "rumi":
-             displayRumiOptions();
-             break;
-         case "zoey":
-             displayZoeyOptions();
-             break;
-         case "mira":
-             displayMiraOptions();
-             break;
-         case "jinu":
-             displayJinuOptions();
-             break;
-         default:
-             break;
-     }
- }
-
- /**
-  * Display Rumi's behaviors
-  */
- public static void displayRumiOptions(){
-     System.out.println("Rumi's options:");
-     System.out.println("1: Eat");
-     System.out.println("2: Sleep");
-     System.out.println("3: Fight");
-     System.out.println("4: Sing");
- }
+    //display Mira's behaviors
+    public static void displayMiraOptions(){
+        System.out.println("Mira's options:");
+        System.out.println("1: Eat");
+        System.out.println("2: Sleep");
+        System.out.println("3: Fight");
+        System.out.println("4: Rap");
+    }
 
 /**
  * Display Zoey's behaviors
@@ -203,7 +185,33 @@ public class App {
 
 
 
+// kim random ending
+if (character.energy <= 0 || character.popularity <= 0){
+    int random_ending = (int)(Math.random() * (3 - 1 + 1) + 1);
+    if (random_ending == 1){
+        System.out.println(character.getName() + " has died from exhaustion. Game Over.");
+    }
+    else if (random_ending == 2){
+        System.out.println("You failed to maintain" + character.getName() + "'s " + "popularity. The demons have broken the honmoon. Game Over.");
+    }
+    else {
+        System.out.println("The demons have taken over with their new hit song 'Hypnotic'. Game over.");
+    }
+}
 
+if (character.energy >= 100 || character.popularity >= 100){
+    int random_ending = (int)(Math.random() * (3 - 1 + 1) + 1);
+    if (random_ending == 1){
+        System.out.println("Congratulations! You have successfully managed your K-pop demon hunter to fame and fortune!");
+    }
+    else if (random_ending == 2){
+        System.out.println("You have defeated the demons and restored peace to the honmoon! Victory is yours!");
+    }
+    else {
+        System.out.println(character.getName() + " has become the ultimate K-pop demon hunter, loved by all!");
+    }
+}
+}
 
 //plan 
 
@@ -212,13 +220,12 @@ public class App {
 
 //display the character's behaviors -julia
 
-//while loop - ethan
+//while loop 
+//while(character.energy < 100 && character.energy > 0){
+    //something
+//}
+//a way to win and die (ending) satisfy our random event here potentially kim == draft done
 
-//a way to win and die (ending) satisfy our random event here potentially - kim
-
-// random events -kim
-//kim- if popularity level reaches a certain point you win, if energy level is below a certain point you die, random: random number generator, pick a number, after every while loop add +1 to random int, once it gets to random number do the event
-//kim random stuff- int randomEventCounter = 0; (int)(Math.random()*(5-1+1)+1), 
 
 //if (character.energy <= 0 || character.popularity <= 0){
     //int random_ending = (int)(Math.random() * (3 - 1 + 1) + 1);

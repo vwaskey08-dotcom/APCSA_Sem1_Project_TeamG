@@ -13,6 +13,13 @@ public class Zoey implements DemonHunter {
     private String name;
 
     //constructor
+    /** 
+     * Constructor for Zoey character
+     * @param weapon weapon of character
+     * @param energy energy of character
+     * @param popularityLevel popularity level of character
+     * @param hairColor hair color of character
+     */
     public Zoey(String weapon, int energy, int popularityLevel, String hairColor){
         this.weapon = "daggers";
         this.energy = 50;
@@ -77,6 +84,9 @@ public String getHairColor()
 }
 
 // actions
+/** 
+ * Increases energy by 10 when eating
+ */
     public void eat() {
         if(energy >= 90){
             energy = 100;
@@ -85,7 +95,9 @@ public String getHairColor()
             energy += 10;
         }
     }
-
+/** 
+ * Increases energy by 20 when sleeping
+ */
     public void sleep() {
         if(energy >= 80){
             energy = 100;
@@ -104,7 +116,9 @@ public String getHairColor()
         }
         energy -= 10;
     }
-
+/**
+ * Decreases energy by 15 and popularity level by 10 when fighting
+ */
     public void fight(){
         energy -= 10;
         int roll = (int)((Math.random()*2)+1);
@@ -115,25 +129,28 @@ public String getHairColor()
             popularityLevel -= 10;
         }
     }
-
+/**
+ * Returns a string representation of the character
+ */
     public String toString()
     {
         return "Character: " + name+ "\nWeapon: " + weapon + "\nEnergy: " + energy + "\nPopularity Level: " + popularityLevel + "\nHair Color: " + hairColor;
     }
 
     
-    // if energy reaches 0, demons win
-    public void demonsWin(){
-        energy = 0;
-        popularityLevel = 0;
-        System.out.println("The demons have won! The honmoon is destroyed!");
-    }
+ // if energy reaches 0, demons win
+    //public void demonsWin(){
+        //energy = 0;
+        //popularityLevel = 0;
+        //System.out.println("The demons have won! The honmoon is destroyed!");
+    //}
 
     // if popularityLevel reaches 500, honmoon is saved
-    public void honmoonSaved(){
-        popularityLevel = 500;
-        System.out.println("The honmoon is saved!");
+    //public void honmoonSaved(){
+        //popularityLevel = 500;
+        //System.out.println("The honmoon is saved!");
         // gjhkhkjh
+   // }
     }
 
     @Override
