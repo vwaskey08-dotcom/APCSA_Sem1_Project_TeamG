@@ -135,4 +135,9 @@ public String getHairColor()
         System.out.println("The honmoon is saved!");
         // gjhkhkjh
     }
+
+    @Override
+    public int getPopularity() {
+        return popularityLevel;
+    }
 }
