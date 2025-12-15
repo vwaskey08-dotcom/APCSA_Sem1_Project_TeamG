@@ -14,7 +14,8 @@ The simulator is designed to enable the user to act as the manager of either Rum
 -Zoey: Purple hair, can write songs, and uses daggers
 
 # Class Diagram:
-![APCSA_Sem1_Project_TeamG_classDiagram](https://github.com/user-attachments/assets/49d0fe11-826a-487b-8feb-22e2c2420930)
+<img width="721" height="371" alt="APCSA_Sem1_Project_TeamG_classDiagram drawio" src="https://github.com/user-attachments/assets/968da6cc-6709-447e-9f4c-3f0279d61623" />
+
 
 
 
