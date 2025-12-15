@@ -7,5 +7,7 @@ interface DemonHunter
     public void sleep();
     public void fight();
     public String getName();
+    public int getEnergy();
+    public int getPopularity();
 
 }

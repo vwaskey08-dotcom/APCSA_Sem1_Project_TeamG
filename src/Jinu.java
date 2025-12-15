@@ -29,12 +29,7 @@ public class Jinu implements DemonHunter{
         this.name = "Jinu";
     }
     
-    //violet added a getter method to test stuff
 
-    public String getName()
-    {
-        return name;
-    }
 
 
     //---------------initialize methods-------------------
@@ -120,7 +115,7 @@ public class Jinu implements DemonHunter{
      * Gets popularity level
      * @return popularity level
      */
-    public int getPopularityLevel(){
+    public int getPopularity(){
         return popularityLevel;
     }
 

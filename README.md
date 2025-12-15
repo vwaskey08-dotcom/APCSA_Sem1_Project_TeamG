@@ -24,4 +24,16 @@ The main classes are Rumi, Jinu, Mira, and Zoey, who are all under a K-pop inter
 The program is run within the main class, requiring user input at every step, starting with choosing a character to play as, such as Rumi, by inputting a number, like 1. From there, the player will be able to dictate the actions of their character by inputting numbers, like 1 to make them sleep, and either save the honmoon or allow the demons to win.
 
 # Development Process
-We worked together as a team to complete the program, with each team member working on a different class and finishing a different part of the main program. We had daily scrum meetings, each utilzing our various roles within the team to make sure each part of the program was completed efficently with minimal conflict.
+We worked together as a team to complete the program, with each team member working on a different class and finishing a different part of the main program. We had daily scrum meetings, each utilising our various roles within the team to make sure each part of the program was completed efficiently with minimal conflict.
+
+# Team Roles
+-Julia: Team Leader
+
+-Violet: Programming Lead
+
+-Kim: Technical Writer
+
+-Ethan: Quality Assurance Tester
+
+# Future Improvements
+Looking towards growing our project, we would want to expand playable options for the characters, like more attributes that flesh out characters and grow the number of methods available. Additionally, we would like to expand the interactive elements of the game, creating more random events throughout the game based on the while loop to make playing more interesting and unpredictable and add to the user experience.
