@@ -20,8 +20,8 @@ public class Rumi implements DemonHunter{
         public Rumi()
         {
             this.weapon = "Saingeom";
-            this.energy = 50;
-            this.popularityLevel = 50;
+            Rumi.energy = 50;
+            Rumi.popularityLevel = 50;
             this.hairColor = "Bright Purple";
             this.name = "Rumi";
         }
