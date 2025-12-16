@@ -15,7 +15,7 @@ public class Rumi implements DemonHunter{
         private String name;
     
         /**
-         * Constructor for Rumi class
+         * Constructor for Rumi class. Initializes default attributes.
          */
         public Rumi()
         {
@@ -28,47 +28,47 @@ public class Rumi implements DemonHunter{
         
         //--------------getter methods-------------------
     
-        /**
-         * Getter for name
-         * @return name of character
-         */
+    /**
+     * Getter for the character's name.
+     * @return name of character
+     */
     
         public String getName()
         {
             return name;
         }
     
-        /**
-         * Getter for weapon
-         * @return weapon of character
-         */
+    /**
+     * Getter for the character's weapon.
+     * @return weapon of character
+     */
         public String getWeapon()
         {
             return weapon;
         }
     
-        /**
-         * Getter for energy
-         * @return energy of character
-         */
+    /**
+     * Getter for the character's energy.
+     * @return energy of character (0-100)
+     */
         public int getEnergy()
         {
             return energy;
         }
     
-        /**
-         * Getter for popularity level
-         * @return popularity level of character
-         */
+    /**
+     * Getter for the character's popularity level.
+     * @return popularity level of character (0-100)
+     */
         public int getPopularity()
         {
             return popularityLevel;
         }
     
-        /**
-         * Getter for hair color
-         * @return hair color of character
-         */
+    /**
+     * Getter for the character's hair color.
+     * @return hair color of character
+     */
         public String getHairColor()
         {
             return hairColor;
@@ -76,10 +76,10 @@ public class Rumi implements DemonHunter{
     
     
     
-        //--------------setter methods-------------------
-    
+        //--------------action methods-------------------
+
         /**
-         * Increases energy by 10
+         * Eat action: increases energy by 10 (cap at 100).
          */
         public void eat() {
             if(energy >= 90){
@@ -91,7 +91,7 @@ public class Rumi implements DemonHunter{
         }
     
         /**
-         * Increases energy by 20
+         * Sleep action: increases energy by 20 (cap at 100).
          */
         public void sleep() {
             if(energy >= 80){
@@ -103,7 +103,7 @@ public class Rumi implements DemonHunter{
         }
     
         /**
-         * Decreases energy by 15 
+         * Fight action: decreases energy and randomly adjusts popularity.
          */
         public void fight(){
             energy -= 10;
@@ -117,7 +117,7 @@ public class Rumi implements DemonHunter{
         }
     
         /**
-         * Increases popularity level by 5
+         * Sing action: increases popularity (cap at 100) and reduces energy.
          */
         public static void sing()
         {
@@ -130,8 +130,14 @@ public class Rumi implements DemonHunter{
             energy -= 10;
     }
 
+    public void setEnergy(int energy)
+    {
+        Rumi.energy = energy;
+    }
+
     /**
-     * toString method to display character information
+     * Returns a human-readable summary of Rumi's attributes.
+     * @return formatted character information
      */
     public String toString()
     {
