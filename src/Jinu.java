@@ -7,24 +7,18 @@
 public class Jinu implements DemonHunter{
     
     //----------initalize attributes--------------
-    static String weapon;
-    static int energy;
-    static int popularityLevel;
-    static String hairColor;
-    static String name;
+    String weapon;
+    private static int energy;
+    private static int popularityLevel;
+    String hairColor;
+    String name;
     
     //--------------create constructor---------------
-    public Jinu(String weapon, int energy, int popularityLevel, String hairColor){
-        this.weapon = weapon;
-        this.energy = energy;
-        this.popularityLevel = popularityLevel;
-        this.hairColor = hairColor;
-    }
     
     public Jinu(){
         this.weapon = "white paper fan";
-        this.energy = 50;
-        this.popularityLevel = 50;
+        Jinu.energy = 50;
+        Jinu.popularityLevel = 50;
         this.hairColor = "Black";
         this.name = "Jinu";
     }
@@ -150,7 +144,7 @@ public class Jinu implements DemonHunter{
      * @param energy
      */
     public void setEnergy(int energy){
-        this.energy = energy;
+        Jinu.energy = energy;
     }
 
     /**
@@ -158,7 +152,7 @@ public class Jinu implements DemonHunter{
      * @param popularityLevel
      */
     public void setPopularityLevel(int popularityLevel){
-        this.popularityLevel = popularityLevel;
+        Jinu.popularityLevel = popularityLevel;
     }
 
     /**
