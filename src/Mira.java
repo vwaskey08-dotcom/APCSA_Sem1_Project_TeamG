@@ -2,7 +2,7 @@
  * Mira class represents a Demon Hunter character with specific attributes and actions.
  * Implements the DemonHunter interface.
  * 
- * @author 
+ * @author Kim
  * @version 1.0
  */
 
@@ -84,17 +84,33 @@ public class Mira implements DemonHunter{
         }
         energy -= 10;
     }
-    public String getOptions(){
-        return "1. Eat\n2. Sleep\n3. Fight\n4. Rap\n5. End Game";
-    }
+    
 
-    @Override
+    /**
+     * gets energy
+     * @return energy
+     */
     public int getEnergy() {
         return energy;
     }
 
-    @Override
+    
     public int getPopularity() {
         return popularityLevel;
+    }
+
+    
+    public void setEnergy(int energy)
+    {
+        Mira.energy = energy;
+    }
+
+    /**
+     * Returns a string describing Mira's current attributes.
+     * @return formatted character information
+     */
+    public String toString()
+    {
+        return ("Mira's weapon: " + weapon + "\nMira's energy level: " + energy + "\nMira's popularity level: " + popularityLevel + "\nMira's hair color: " + hairColor);
     }
 }
